@@ -1,0 +1,37 @@
+contact_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Contact</h1>
+        <p>What can we help with?</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container form">
+        <form method="post" class="card form-card">
+            <div class="grid-2">
+                <label> Name
+                    <input name="name" required />
+                </label>
+                <label> Email
+                    <input name="email" type="email" required />
+                </label>
+            </div>
+            <label> Subject
+                <input name="subject" required />
+            </label>
+            <label> Message
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send</button>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <p class="flash">{{ messages[0] }}</p>
+                {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</section>
+{% endblock %}
+"""

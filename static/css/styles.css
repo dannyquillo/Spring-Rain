@@ -1,0 +1,86 @@
+:root{
+    --bg:#0f1f14; /* deep green */
+    --fg:#0c0c0c;
+    --brand:#1f6d3d; /* accent green */
+    --light:#f4f7f5;
+    --muted:#6b7a70;
+    --card:#ffffff;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#182018}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+
+/* header */
+.site-header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #e8eee9}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.8rem 0}
+.brand{font-weight:700;color:#123d25}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{padding:0.4rem 0.5rem;border-radius:6px}
+.nav .cta{background:var(--brand);color:white;padding:0.45rem 0.75rem}
+.phone{font-weight:600;color:#123d25}
+
+
+/* hero */
+.hero{background-size:cover;background-position:center;color:white}
+.hero::after{content:"";display:block;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.35));position:absolute;inset:0}
+.hero{position:relative}
+.hero-inner{position:relative;z-index:1;padding:8rem 0}
+.hero h1{font-size:clamp(2rem,6vw,3.2rem);margin:0 0 .5rem}
+.hero p{max-width:50ch}
+.btn{display:inline-block;background:var(--brand);color:white;padding:.7rem 1rem;border-radius:10px}
+.text-link{font-weight:600}
+
+
+/* sections */
+.section{padding:3rem 0}
+.section.alt{background:#f7fbf8}
+.page-header{background:#f7fbf8;border-bottom:1px solid #e8eee9}
+.page-header .container{padding:2rem 0}
+
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid #e8eee9;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.card h3{margin:.8rem 1rem .3rem}
+.card p{margin:0 1rem 1rem;color:#123d25}
+.card img{height:160px;object-fit:cover;width:100%}
+
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.gallery figure{margin:0;border:1px solid #e8eee9;border-radius:12px;overflow:hidden}
+.gallery figcaption{padding:.6rem 1rem;color:#35523f}
+
+
+/* grids */
+.grid-2{display:grid;gap:1.25rem;grid-template-columns:repeat(2,1fr)}
+.grid-3{display:grid;gap:1.25rem;grid-template-columns:repeat(3,1fr)}
+@media (max-width: 800px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+
+/* pills */
+.areas{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{border:1px solid #dfe8e1;padding:.4rem .7rem;border-radius:999px;background:white}
+
+
+/* reviews */
+.reviews, .review{display:grid;gap:1rem}
+.review{border-left:4px solid var(--brand);padding-left:1rem}
+
+
+/* forms */
+.form-card{padding:1rem}
+.form label{display:grid;gap:.35rem;margin:.5rem 0}
+.form input,.form textarea{padding:.6rem .7rem;border:1px solid #cfe0d5;border-radius:10px}
+.flash{margin-top:.8rem;color:#135f36}
+
+
+/* footer */
+.site-footer{background:#f7fbf8;border-top:1px solid #e8eee9;padding:2rem 0;margin-top:2rem}
+.site-footer h4{margin:.2rem 0 0.5rem}
+.site-footer ul{list-style:none;padding:0;margin:.5rem 0;display:grid;gap:.3rem}
+

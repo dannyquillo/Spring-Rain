@@ -1,0 +1,22 @@
+about_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Founded in 1995 in Highland Park, IL. We focus on quality people, hard work, and respect.</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container grid-2">
+        <div>
+            <h2>Commitment to quality</h2>
+            <p>We build conservation‑oriented, efficient systems and keep current with industry best practices and training.</p>
+        </div>
+        <div>
+            <img class="rounded" src="{{ url_for('static', filename='images/placeholder.jpg') }}" alt="Team working in a garden" />
+        </div>
+    </div>
+</section>
+{% endblock %}
+"""

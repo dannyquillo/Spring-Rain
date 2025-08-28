@@ -1,0 +1,22 @@
+portfolio_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Portfolio</h1>
+        <p>Selected installation and landscapes we service.</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container gallery">
+        {% for item in items %}
+        <figure>
+            <img src="{{ url_for('static', filename='images/' ~ item.img)
+            }}" alt="{{ item.title }}">
+            <figcaption>{{ item.title }}</figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+"""

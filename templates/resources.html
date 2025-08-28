@@ -1,0 +1,28 @@
+services = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Resources for your system</h1>
+        <p>Controller basics: set zone runtimes, program start times, and
+        watering days. We're all always a call away if you need assistance.</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h2>Controller Manuals & Videos</h2>
+        <ul class = "links">
+            <li><a target="_blank" href
+            ="https://rainbird.com/sites/defaut/files/media/documents/2022-06/ESP_TM2_User_Guide_en_5-21.pdf">Rain
+            Bird ESP-TM2 (PDF)</a></li>
+            <li><a target="_blank" href="https://www.youtube.com/watch?v=Q6s6aHcY5Ng">How to program Hunter X‑Core (YouTube)</a></li>
+            <li><a target="_blank" href="https://www.weathermatic.com/smartline/">Weathermatic SmartLine</a></li>
+        </ul>
+        <h3 class="mt">Rule-Of-Thumb schedules</h3>
+        <p>New installs often need daily, gentle cycles for the first
+        weeks; establoshed landscapes typically need 1" of water per week
+        depending on sun, wind, slope, and soil.</p>
+    </div>
+</section>
+{% endblock %}
+"""

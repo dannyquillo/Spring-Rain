@@ -1,0 +1,18 @@
+service_area_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Service Area</h1>
+        <p>We proudly serve the greater Chicago area, including the following neighborhoods:</p>
+    </div>
+</section>
+<section class="section">
+    <div class="container areas">
+        {% for a in areas %}
+        <span class="pill">{{ a }}</span>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+"""

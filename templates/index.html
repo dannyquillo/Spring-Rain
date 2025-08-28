@@ -1,0 +1,49 @@
+index_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero"
+    <div class="container hero-inner">
+    <h1>Greener grass starts here</h1>
+    <p>Efficient irrigation, reliable service, and a team that treats your yard like our own.</p>
+    <a href="{{ url_for('contact') }}" class="btn">Request Service</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>What sets us apart</h2>
+        <p>Decades of experience, attention to detail, and conservation-minded designs that help landscapes thrive.</p>
+    </div>
+</section>
+
+<section class="section alt">
+    <div class="container">
+        <h2>Services for your lawn, garden & peace of mind</h2>
+        <div class="cards">
+            {% for s in services %}
+            <article class="card">
+                <img src="{{ url_for('static', filename='images/' ~ s.img) }}" alt=""/>
+                <h3>{{ s.title }}</h3>
+                <p>{{ s.desc }}</p>
+                <a class="text-link" href="{{ url_for('services') }}">Learn more</a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>What customers say</h2>
+        <div class="reviews">
+            {% for r in reviews %}
+            <blockquote>
+                <p>“{{ r.text }}”</p>
+                <footer>— {{ r.author }}</footer>
+            </blockquote>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+"""

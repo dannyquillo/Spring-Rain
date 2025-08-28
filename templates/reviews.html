@@ -1,0 +1,20 @@
+reviews_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Customer Reviews</h1>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        {% for r in reviews %}
+        <blockquote class="review">
+            <p>"{{ r.text }}"</p>
+            <footer>- {{ r.author }}</footer>
+        </blockquote>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+"""

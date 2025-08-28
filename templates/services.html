@@ -1,0 +1,21 @@
+services_html = r"""
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Our Services</h1>
+    </div>
+</section>
+<section class="container">
+    <div class="container cards">
+        {% for s in services %}
+        <article class = "card">
+            <img src="{{ url_for('static', filename="images/" ~ s.img) }}" alt = "/">
+            <h3 id="{{ s.slug}}">{{ s.title }}</h3>
+            <p>{{ s.desc }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+"""
